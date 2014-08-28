@@ -10,7 +10,12 @@ import re
 
 from educe.learning.keys import Key, KeyGroup, MergedKeyGroup, ClassKeyGroup
 import educe.pdtb
-from educe.stac.util.features import tune_for_csv, treenode, CorpusConsistencyException
+
+from educe.learning.csv import tune_for_csv
+from educe.stac.learning.features import CorpusConsistencyException
+from educe.internalutil import treenode
+# MODIFIED (3 lignes prec)
+##from educe.stac.util.features import tune_for_csv, treenode, CorpusConsistencyException
 
 # pylint: disable=too-many-public-methods
 

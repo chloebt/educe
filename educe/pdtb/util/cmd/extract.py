@@ -9,8 +9,13 @@ import codecs
 import csv
 import os
 
-import stac.csv
-import stac.keys
+import learning.csv
+import learning.keys
+# MODIFIED (2 lignes prec)
+#import stac.csv
+#import stac.keys
+
+
 
 from ..args import\
     add_usual_input_args, add_usual_output_args,\
@@ -26,7 +31,8 @@ def mk_csv_writer(keys, fstream):
     start off csv writer for a given mode
     """
     csv_quoting = csv.QUOTE_MINIMAL
-    writer = stac.keys.KeyGroupWriter(fstream, keys, quoting=csv_quoting)
+    writer = learning.keys.KeyGroupWriter(fstream, keys, quoting=csv_quoting)
+    ##writer = stac.keys.KeyGroupWriter(fstream, keys, quoting=csv_quoting)
     writer.writeheader()
     return writer
 

@@ -19,7 +19,8 @@ Corpus management
 
 import sys
 
-class FileId:
+# Modified
+class FileId( object ):
     """
     Information needed to uniquely identify an annotation file.
 
@@ -158,6 +159,7 @@ class Reader:
             subcorpus=cfiles
         return self.slurp_subcorpus(subcorpus, verbose)
 
+    # bizarre classe abstraite qui renvoie qqc : abc selon coco ou raise not implemented error
     def slurp_subcorpus(self, cfiles, verbose=False):
         """
         Derived classes should implement this function
